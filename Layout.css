@@ -1,1 +1,15 @@
-/*# sourceMappingURL=Layout.css.map */
+.l-header {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 15vh;
+  background-color: blue;
+  align-items: center;
+}
+.l-header .navBar {
+  font-size: 18px;
+  display: flex;
+  align-content: center;
+}/*# sourceMappingURL=Layout.css.map */
