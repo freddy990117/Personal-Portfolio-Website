@@ -1,10 +1,9 @@
 import React from "react";
 import "./Layout.css";
 const navs = [
-  { name: "Home" },
-  { name: "About" },
-  { name: "Skill" },
+  { name: "Resume" },
   { name: "Project" },
+  { name: "Skill" },
   { name: "Contact" },
 ];
 
@@ -13,6 +12,7 @@ const Header = () => {
     <div className="l-header">
       <div className="title">
         <h2>Freddy</h2>
+        <p>Edit</p>
       </div>
       <div className="navBar">
         {navs.map((nav) => (
@@ -23,6 +23,9 @@ const Header = () => {
   );
 };
 
+const Footer = () => {
+  return <div></div>;
+};
 const Layout = () => {
   return (
     <div>

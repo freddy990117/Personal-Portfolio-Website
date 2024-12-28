@@ -1,17 +1,38 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
 .l-header {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 15vh;
   background-color: blue;
-  align-items: center;
+
+  z-index: 100;
   .title {
+    display: flex;
+    align-items: center;
+    margin-left: 4rem;
+    font-size: 22px;
+    p {
+      font-size: 1rem;
+      margin-left: 1rem;
+    }
   }
   .navBar {
-    font-size: 18px;
+    margin-left: auto;
+    font-size: 20px;
     display: flex;
-    align-content: center;
+    .nav {
+      padding: 0 1.5rem;
+      margin: 1rem;
+    }
   }
 }
