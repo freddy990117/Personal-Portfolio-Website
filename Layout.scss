@@ -4,35 +4,59 @@
   margin: 0;
 }
 
-.l-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 15vh;
-  background-color: blue;
-
-  z-index: 100;
-  .title {
+body {
+  // Layout Header 設定
+  .l-header {
     display: flex;
     align-items: center;
-    margin-left: 4rem;
-    font-size: 22px;
-    p {
-      font-size: 1rem;
-      margin-left: 1rem;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 15vh;
+    background-color: blue;
+    z-index: 100;
+    .title {
+      display: flex;
+      align-items: center;
+      margin-left: 3rem;
+      font-size: 18px;
+      p {
+        font-size: 14px;
+        margin-left: 1rem;
+      }
+    }
+    .navBar-header {
+      margin-right: 3rem;
+      font-size: 15px;
+      display: flex;
+      .nav-header {
+        font-weight: bolder;
+        padding: 0 1.5rem;
+        margin: 1rem;
+      }
     }
   }
-  .navBar {
-    margin-left: auto;
-    font-size: 20px;
-    display: flex;
-    .nav {
-      padding: 0 1.5rem;
-      margin: 1rem;
+  // Layout Main 設定
+  // Layout Footer 設定
+  .l-footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: gray;
+    .navBar-footer {
+      display: flex;
+      height: 20vh;
+      justify-content: space-around;
+      align-items: center;
+      font-size: 14px;
+      .nav-footer {
+        h3 {
+          font-weight: bolder;
+        }
+      }
     }
   }
 }

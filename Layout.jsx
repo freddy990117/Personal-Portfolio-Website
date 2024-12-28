@@ -7,6 +7,13 @@ const navs = [
   { name: "Contact" },
 ];
 
+const navFooter = [
+  { name: "Phone :", data: "0988-XXX-XXX" },
+  { name: "Email :", data: "freddy990117@gmail.com" },
+  { name: "Social Media :", data: "" },
+  { name: "© 2025 By Freddy" },
+];
+
 const Header = () => {
   return (
     <div className="l-header">
@@ -14,9 +21,9 @@ const Header = () => {
         <h2>Freddy</h2>
         <p>Edit</p>
       </div>
-      <div className="navBar">
+      <div className="navBar-header">
         {navs.map((nav) => (
-          <div className="nav">{nav.name}</div>
+          <div className="nav-header">{nav.name}</div>
         ))}
       </div>
     </div>
@@ -24,14 +31,25 @@ const Header = () => {
 };
 
 const Footer = () => {
-  return <div></div>;
+  return (
+    <div className="l-footer">
+      <div className="navBar-footer">
+        {navFooter.map((nav) => (
+          <div className="nav-footer">
+            <h3>{nav.name}</h3>
+            <span>{nav.data}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 };
 const Layout = () => {
   return (
     <div>
       <Header />
-      <div className="l-main"></div>
-      <div className="l-footer"></div>
+      <div className="l-main" style={{ height: "50vh" }}></div>
+      <Footer />
     </div>
   );
 };

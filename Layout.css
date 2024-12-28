@@ -4,7 +4,7 @@
   margin: 0;
 }
 
-.l-header {
+body .l-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -16,22 +16,40 @@
   background-color: blue;
   z-index: 100;
 }
-.l-header .title {
+body .l-header .title {
   display: flex;
   align-items: center;
-  margin-left: 4rem;
-  font-size: 22px;
+  margin-left: 3rem;
+  font-size: 18px;
 }
-.l-header .title p {
-  font-size: 1rem;
+body .l-header .title p {
+  font-size: 14px;
   margin-left: 1rem;
 }
-.l-header .navBar {
-  margin-left: auto;
-  font-size: 20px;
+body .l-header .navBar-header {
+  margin-right: 3rem;
+  font-size: 15px;
   display: flex;
 }
-.l-header .navBar .nav {
+body .l-header .navBar-header .nav-header {
+  font-weight: bolder;
   padding: 0 1.5rem;
   margin: 1rem;
+}
+body .l-footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: gray;
+}
+body .l-footer .navBar-footer {
+  display: flex;
+  height: 20vh;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 14px;
+}
+body .l-footer .navBar-footer .nav-footer h3 {
+  font-weight: bolder;
 }/*# sourceMappingURL=Layout.css.map */
