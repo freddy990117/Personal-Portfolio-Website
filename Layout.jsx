@@ -1,10 +1,12 @@
 import React from "react";
+import { useNavigate, Outlet } from "react-router-dom";
+
 import "./Layout.css";
 const navs = [
-  { name: "Resume" },
-  { name: "Project" },
-  { name: "Skill" },
-  { name: "Contact" },
+  { name: "Resume", path: "/Resume" },
+  { name: "Project", path: "/Project" },
+  { name: "Skill", path: "/Skill" },
+  { name: "Contact", path: "/Contact" },
 ];
 
 const navFooter = [
@@ -24,10 +26,11 @@ const navFooter = [
       },
     ],
   },
-  { type: "CopyRight", name: "© 2025 by Freddy" },
+  { type: "CopyRight", name: "© 2025 Powered by Freddy" },
 ];
 
 const Header = () => {
+  const navigate = useNavigate();
   return (
     <div className="l-header">
       <div className="title">
@@ -36,7 +39,12 @@ const Header = () => {
       </div>
       <div className="navBar-header">
         {navs.map((nav, index) => (
-          <div key={index} className="nav-header">
+          <div
+            key={index}
+            className="nav-header"
+            onClick={() => navigate(nav.path)}
+            style={{ cursor: "pointer" }}
+          >
             {nav.name}
           </div>
         ))}
@@ -80,7 +88,9 @@ const Layout = () => {
   return (
     <div>
       <Header />
-      <div className="l-main" style={{ height: "50vh" }}></div>
+      <div className="l-main" style={{ height: "" }}>
+        <Outlet />
+      </div>
       <Footer />
     </div>
   );
