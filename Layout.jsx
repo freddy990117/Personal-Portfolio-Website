@@ -8,10 +8,23 @@ const navs = [
 ];
 
 const navFooter = [
-  { name: "Phone :", data: "0988-XXX-XXX" },
-  { name: "Email :", data: "freddy990117@gmail.com" },
-  { name: "Social Media :", data: "" },
-  { name: "© 2025 By Freddy" },
+  { type: "contact", name: "Phone :", data: "0988-XXX-XXX" },
+  { type: "contact", name: "Email :", data: "freddy990117@gmail.com" },
+  {
+    type: "social",
+    name: "Social Media :",
+    icons: [
+      {
+        class: "fa-brands fa-github fa-2x",
+        url: "https://github.com/freddy990117",
+      },
+      {
+        class: "fa-brands fa-instagram fa-2x",
+        url: "https://www.instagram.com",
+      },
+    ],
+  },
+  { type: "CopyRight", name: "© 2025 by Freddy" },
 ];
 
 const Header = () => {
@@ -22,8 +35,10 @@ const Header = () => {
         <p>Edit</p>
       </div>
       <div className="navBar-header">
-        {navs.map((nav) => (
-          <div className="nav-header">{nav.name}</div>
+        {navs.map((nav, index) => (
+          <div key={index} className="nav-header">
+            {nav.name}
+          </div>
         ))}
       </div>
     </div>
@@ -34,16 +49,33 @@ const Footer = () => {
   return (
     <div className="l-footer">
       <div className="navBar-footer">
-        {navFooter.map((nav) => (
-          <div className="nav-footer">
+        {navFooter.map((nav, index) => (
+          <div key={index} className="nav-footer">
             <h3>{nav.name}</h3>
-            <span>{nav.data}</span>
+            {/* 如果有 data，直接顯示 */}
+            {nav.data && <span>{nav.data}</span>}
+
+            {/* 如果是社交媒體類型，渲染圖標 */}
+            {nav.type === "social" && (
+              <div className="social-icons">
+                {nav.icons.map((icon, idx) => (
+                  <i
+                    key={idx}
+                    className={icon.class}
+                    onClick={() => {
+                      window.open(icon.url, "_blank");
+                    }}
+                  ></i>
+                ))}
+              </div>
+            )}
           </div>
         ))}
       </div>
     </div>
   );
 };
+
 const Layout = () => {
   return (
     <div>
