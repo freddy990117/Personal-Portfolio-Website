@@ -57,9 +57,10 @@ const Footer = () => {
   return (
     <div className="l-footer">
       <div className="navBar-footer">
+        {/* 透過 map 顯示出表單的內容 */}
         {navFooter.map((nav, index) => (
           <div key={index} className="nav-footer">
-            <h3>{nav.name}</h3>
+            <h4>{nav.name}</h4>
             {/* 如果有 data，直接顯示 */}
             {nav.data && <span>{nav.data}</span>}
 
@@ -84,13 +85,21 @@ const Footer = () => {
   );
 };
 
+const Main = () => {
+  return (
+    <div className="l-main">
+      <h2>JAJA</h2>
+      <h2>JAJA</h2>
+      <h2>JAJA</h2>
+      <Outlet />
+    </div>
+  );
+};
 const Layout = () => {
   return (
     <div>
       <Header />
-      <div className="l-main" style={{ height: "" }}>
-        <Outlet />
-      </div>
+      <Main />
       <Footer />
     </div>
   );
