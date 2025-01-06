@@ -1,11 +1,10 @@
-import React from "react";
-import { useNavigate, Outlet, useLocation } from "react-router-dom";
+import { useNavigate, Outlet } from "react-router-dom";
 
 import "./Layout.css";
+
 const navs = [
-  { name: "Resume", path: "/Resume" },
+  { name: "Resume", path: "Resume" },
   { name: "Project", path: "Project" },
-  { name: "Skill", path: "Skill" },
   { name: "Contact", path: "Contact" },
 ];
 

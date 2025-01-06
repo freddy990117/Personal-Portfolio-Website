@@ -63,7 +63,7 @@ body .l-main .main-info .main-picture img {
   border-radius: 100%;
 }
 body .l-main .main-info .main-aboutme {
-  flex: 1;
+  flex: 1.5;
   width: 80%;
   height: 70%;
   display: flex;
