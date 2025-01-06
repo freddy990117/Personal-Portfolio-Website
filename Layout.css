@@ -36,6 +36,7 @@ body .l-header .navBar-header .nav-header {
   font-weight: bolder;
   padding: 0 1.5rem;
   margin: 1rem;
+  cursor: pointer;
 }
 body .l-main {
   margin: 2rem 7rem;
