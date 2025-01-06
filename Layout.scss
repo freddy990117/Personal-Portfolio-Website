@@ -7,6 +7,11 @@
 }
 
 body {
+  .layout-container {
+    .outlet-containter {
+      height: 140vh;
+    }
+  }
   // Layout Header 設定
   .l-header {
     display: flex;

@@ -129,10 +129,12 @@ const Footer = () => {
 
 const Layout = () => {
   return (
-    <div>
+    <div className="layout-container">
       <Header />
       {/* <Main /> */}
-      <Outlet />
+      <div className="outlet-containter">
+        <Outlet />
+      </div>
       <Footer />
     </div>
   );

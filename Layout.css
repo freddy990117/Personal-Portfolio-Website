@@ -6,6 +6,9 @@
   color: black;
 }
 
+body .layout-container .outlet-containter {
+  height: 140vh;
+}
 body .l-header {
   display: flex;
   align-items: center;
