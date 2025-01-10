@@ -22,7 +22,7 @@ body {
       display: flex;
       align-items: center;
       margin-left: 3rem;
-      font-size: 18px;
+      font-size: 2rem;
       p {
         font-size: 14px;
         margin-left: 1rem;
@@ -134,46 +134,51 @@ body {
   }
   // Resume.jsx 設定
   .resume-page {
-    width: 100%;
-    height: 100%;
-    border: 1px solid black;
     display: flex;
-    justify-content: center;
     align-items: start;
-    .resume-left {
-      border: 1px solid black;
-      background-color: red;
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: start;
-      h1 {
-        font-size: 2.5rem;
-        margin: 2rem;
-      }
-      .resume-points {
-        font-size: 1.5rem;
-      }
+    flex-direction: column;
+    padding: 1.5rem 6rem;
+    .resume-title {
+      font-size: 0.9rem;
     }
-    .resume-right {
-      background-color: blue;
-      width: 100%;
-      height: 100%;
-      border: 1px solid black;
+    .resume-info {
       display: flex;
-      h3 {
-        margin: 0.5rem;
-        font-size: 1.1rem;
-      }
-      .resume-time {
-        flex: 2;
-      }
-      .resume-content {
-        flex: 8;
+      margin: 3rem 0;
+      .resume-left {
         display: flex;
-        flex-direction: column;
         align-items: start;
-        font-size: 1rem;
+        flex: 1;
+        h2 {
+          font-size: 1.5rem;
+          margin: 0.5rem 0;
+        }
+      }
+      .resume-right {
+        display: flex;
+        flex-direction: row;
+        align-items: start;
+        flex: 1;
+        .resume-time {
+          width: 30%;
+          h3 {
+            font-weight: 100;
+          }
+        }
+        .resume-job {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          align-items: start;
+          justify-content: start;
+          text-align: start;
+          h3 {
+            margin: 0.2rem;
+          }
+          p {
+            margin: 0.2rem;
+            font-weight: 100;
+          }
+        }
       }
     }
   }
