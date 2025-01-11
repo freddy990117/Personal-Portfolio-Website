@@ -83,6 +83,10 @@ const Footer = () => {
   );
 };
 
+const Line = () => {
+  return <div className="line"></div>;
+};
+
 // 如果設定 Main 在 Layout.jsx 內，會導致所有 Component 都會顯示 Main 的內容，
 // 所以要建立一個 Homepage.jsx 來存放 Main 的內容
 // const Main = () => {
@@ -135,6 +139,7 @@ const Layout = () => {
       <div className="outlet-containter">
         <Outlet />
       </div>
+      <Line />
       <Footer />
     </div>
   );

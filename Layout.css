@@ -112,55 +112,61 @@ body .l-footer .navBar-footer .nav-footer .social-icons i {
   cursor: pointer;
 }
 body .layout-container .outlet-containter {
-  height: 110vh;
   padding: 60px 0;
 }
-body .resume-page {
+body .page {
   display: flex;
   align-items: start;
   flex-direction: column;
-  padding: 1.5rem 6rem;
+  padding: 1rem 6rem;
 }
-body .resume-page .resume-title {
+body .page .title {
   font-size: 0.9rem;
+  margin-bottom: 2rem;
 }
-body .resume-page .resume-info {
+body .page .info {
   display: flex;
-  margin: 3rem 0;
+  margin: 0.5rem 0;
+  width: 100%;
 }
-body .resume-page .resume-info .resume-left {
+body .page .info .left {
   display: flex;
   align-items: start;
   flex: 1;
 }
-body .resume-page .resume-info .resume-left h2 {
+body .page .info .left h2 {
   font-size: 1.5rem;
   margin: 0.5rem 0;
 }
-body .resume-page .resume-info .resume-right {
+body .page .info .right {
+  margin: 0.5rem 0;
   display: flex;
   flex-direction: row;
   align-items: start;
+  justify-content: start;
   flex: 1;
 }
-body .resume-page .resume-info .resume-right .resume-time {
+body .page .info .right .time {
+  text-align: start;
   width: 30%;
 }
-body .resume-page .resume-info .resume-right .resume-time h3 {
+body .page .info .right .time h3 {
   font-weight: 100;
 }
-body .resume-page .resume-info .resume-right .resume-job {
-  flex: 1;
+body .page .info .right .job {
+  width: 70%;
   display: flex;
   flex-direction: column;
   align-items: start;
   justify-content: start;
   text-align: start;
 }
-body .resume-page .resume-info .resume-right .resume-job h3 {
-  margin: 0.2rem;
-}
-body .resume-page .resume-info .resume-right .resume-job p {
-  margin: 0.2rem;
+body .page .info .right .job p {
   font-weight: 100;
+}
+body .line {
+  border: 1px solid black;
+  width: 100%;
+  opacity: 0.1;
+  margin-bottom: 1rem;
 }/*# sourceMappingURL=Layout.css.map */

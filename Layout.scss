@@ -128,23 +128,24 @@ body {
   // Layout.jsx 設定
   .layout-container {
     .outlet-containter {
-      height: 110vh;
       padding: 60px 0;
     }
   }
   // Resume.jsx 設定
-  .resume-page {
+  .page {
     display: flex;
     align-items: start;
     flex-direction: column;
-    padding: 1.5rem 6rem;
-    .resume-title {
+    padding: 1rem 6rem;
+    .title {
       font-size: 0.9rem;
+      margin-bottom: 2rem;
     }
-    .resume-info {
+    .info {
       display: flex;
-      margin: 3rem 0;
-      .resume-left {
+      margin: 0.5rem 0;
+      width: 100%;
+      .left {
         display: flex;
         align-items: start;
         flex: 1;
@@ -153,33 +154,39 @@ body {
           margin: 0.5rem 0;
         }
       }
-      .resume-right {
+      .right {
+        margin: 0.5rem 0;
         display: flex;
         flex-direction: row;
         align-items: start;
+        justify-content: start;
         flex: 1;
-        .resume-time {
+        .time {
+          text-align: start;
           width: 30%;
           h3 {
             font-weight: 100;
           }
         }
-        .resume-job {
-          flex: 1;
+        .job {
+          width: 70%;
           display: flex;
           flex-direction: column;
           align-items: start;
           justify-content: start;
           text-align: start;
-          h3 {
-            margin: 0.2rem;
-          }
           p {
-            margin: 0.2rem;
             font-weight: 100;
           }
         }
       }
     }
+  }
+  // Line 虛線設定
+  .line {
+    border: 1px solid black;
+    width: 100%;
+    opacity: 0.1;
+    margin-bottom: 1rem;
   }
 }
