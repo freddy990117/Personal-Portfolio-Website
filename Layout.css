@@ -99,6 +99,7 @@ body .l-footer {
   left: 0;
   height: 0vh;
   width: 100%;
+  margin-top: 1rem;
 }
 body .l-footer .navBar-footer {
   width: 100%;
@@ -118,7 +119,7 @@ body .page {
   display: flex;
   align-items: start;
   flex-direction: column;
-  padding: 1rem 6rem;
+  padding: 0.5rem 6rem;
 }
 body .page .title {
   font-size: 0.9rem;
@@ -168,5 +169,4 @@ body .line {
   border: 1px solid black;
   width: 100%;
   opacity: 0.1;
-  margin-bottom: 1rem;
 }/*# sourceMappingURL=Layout.css.map */
