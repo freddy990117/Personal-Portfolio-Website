@@ -182,6 +182,45 @@ body {
         }
       }
     }
+    .project-info {
+      display: flex;
+      margin: 0.5rem 0;
+      width: 100%;
+      height: 60vh;
+      background-color: red;
+      margin: 3rem 0;
+      .project-left {
+        margin: 0 1rem 0 0;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        text-align: start;
+        h2 {
+          font-size: 1.5rem;
+          margin: 0.5rem 0;
+        }
+        h3 {
+          font-size: 1.2rem;
+          text-align: center;
+        }
+        p {
+          font-weight: 500;
+        }
+      }
+      .project-right {
+        margin: 0.5rem 0;
+        display: flex;
+        flex: 1;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        img {
+          height: auto;
+          width: 100%;
+        }
+      }
+    }
   }
   // Line 虛線設定
   .line {
