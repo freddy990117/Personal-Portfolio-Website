@@ -1,5 +1,5 @@
 import React from "react";
-
+import { useOutletContext } from "react-router-dom";
 const Work_Experience = () => {
   return (
     <div className="page">
@@ -119,10 +119,14 @@ const Skills = () => {
 };
 
 const Resume = () => {
+  const { Line } = useOutletContext(); // 從 context 中取得 Line
+
   return (
     <div>
       <Work_Experience />
+      <Line />
       <Skills />
+      <Line />
       <Education />
     </div>
   );
