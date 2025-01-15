@@ -3,9 +3,9 @@ import { useNavigate, Outlet } from "react-router-dom";
 import "./Layout.css";
 
 const navs = [
+  { name: "Home", path: "/" },
   { name: "Resume", path: "Resume" },
   { name: "Project", path: "Project" },
-  { name: "Contact", path: "Contact" },
 ];
 
 const navFooter = [

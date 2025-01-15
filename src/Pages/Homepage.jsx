@@ -2,9 +2,9 @@ import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 const navs = [
-  { name: "Resume", path: "/Resume" },
+  { name: "Home", path: "/" },
+  { name: "Resume", path: "Resume" },
   { name: "Project", path: "Project" },
-  { name: "Contact", path: "Contact" },
 ];
 
 const Main = () => {

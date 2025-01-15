@@ -39,6 +39,9 @@ body .l-header .navBar-header .nav-header {
   cursor: pointer;
 }
 body .l-main .main-info {
+  opacity: 0;
+  transform: translateY(-30px);
+  animation: showMain 1s ease-out forwards;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -65,10 +68,15 @@ body .l-main .main-info .main-aboutme {
   justify-content: center;
   align-items: center;
 }
+body .l-main .main-info .main-aboutme .info {
+  padding: 0 2rem;
+}
 body .l-main .main-info .main-aboutme .navBar-main {
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
 }
 body .l-main .main-info .main-aboutme .navBar-main .nav-main {
   font-weight: bolder;
@@ -77,22 +85,18 @@ body .l-main .main-info .main-aboutme .navBar-main .nav-main {
   border-radius: 100%;
   border: 1px solid black;
   cursor: pointer;
-  transition: all 0.3s ease-in-out;
 }
 body .l-main .main-info .main-aboutme .navBar-main .nav-main[data-index="0"] {
   background-color: #c7a158;
 }
 body .l-main .main-info .main-aboutme .navBar-main .nav-main[data-index="1"] {
-  background-color: #fff4e9;
+  background-color: #dad1cc;
 }
 body .l-main .main-info .main-aboutme .navBar-main .nav-main[data-index="2"] {
   background-color: #b9a88b;
 }
-body .l-main .main-info .main-aboutme .navBar-main .nav-main[data-index="3"] {
-  background-color: #dad1cc;
-}
 body .l-main .main-info .main-aboutme .navBar-main .nav-main:hover {
-  background-color: white;
+  background-color: #f7e6bd;
 }
 body .l-footer {
   position: absolute;
@@ -126,6 +130,9 @@ body .page .title {
   margin-bottom: 2rem;
 }
 body .page .info {
+  opacity: 0;
+  transform: translateY(-30px);
+  animation: showMain 1.5s ease-out forwards;
   display: flex;
   margin: 0.5rem 0;
   width: 100%;
@@ -166,11 +173,13 @@ body .page .info .right .job p {
   font-weight: 100;
 }
 body .page .project-info {
+  opacity: 0;
+  transform: translateY(-30px);
+  animation: showMain 1.5s ease-out forwards;
   display: flex;
   margin: 0.5rem 0;
   width: 100%;
   height: 60vh;
-  background-color: red;
   margin: 3rem 0;
 }
 body .page .project-info .project-left {
@@ -181,7 +190,7 @@ body .page .project-info .project-left {
   align-items: start;
   text-align: start;
 }
-body .page .project-info .project-left h2 {
+body .page .project-info .project-left a h2 {
   font-size: 1.5rem;
   margin: 0.5rem 0;
 }
@@ -208,4 +217,15 @@ body .line {
   border: 1px solid black;
   width: 100%;
   opacity: 0.1;
+}
+
+@keyframes showMain {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }/*# sourceMappingURL=Layout.css.map */

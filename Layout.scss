@@ -43,6 +43,9 @@ body {
   // Layout Main 設定
   .l-main {
     .main-info {
+      opacity: 0;
+      transform: translateY(-30px);
+      animation: showMain 1s ease-out forwards;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -69,10 +72,16 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        .info {
+          padding: 0 2rem;
+        }
         .navBar-main {
           width: 100%;
           display: flex;
-          justify-content: space-around;
+          justify-content: center;
+          align-items: center;
+          gap: 2rem;
+
           .nav-main {
             font-weight: bolder;
             padding: 1.5rem;
@@ -80,26 +89,21 @@ body {
             border-radius: 100%;
             border: 1px solid black;
             cursor: pointer;
-
             // 透過 data-index 設定 nav 的顏色
             &[data-index="0"] {
               background-color: #c7a158;
             }
 
             &[data-index="1"] {
-              background-color: #fff4e9;
+              background-color: #dad1cc;
             }
 
             &[data-index="2"] {
               background-color: #b9a88b;
             }
-            &[data-index="3"] {
-              background-color: #dad1cc;
-            }
-            transition: all 0.3s ease-in-out;
 
             &:hover {
-              background-color: white;
+              background-color: #f7e6bd;
             }
           }
         }
@@ -143,6 +147,9 @@ body {
       margin-bottom: 2rem;
     }
     .info {
+      opacity: 0;
+      transform: translateY(-30px);
+      animation: showMain 1.5s ease-out forwards;
       display: flex;
       margin: 0.5rem 0;
       width: 100%;
@@ -183,11 +190,13 @@ body {
       }
     }
     .project-info {
+      opacity: 0;
+      transform: translateY(-30px);
+      animation: showMain 1.5s ease-out forwards;
       display: flex;
       margin: 0.5rem 0;
       width: 100%;
       height: 60vh;
-      background-color: red;
       margin: 3rem 0;
       .project-left {
         margin: 0 1rem 0 0;
@@ -196,10 +205,13 @@ body {
         flex-direction: column;
         align-items: start;
         text-align: start;
-        h2 {
-          font-size: 1.5rem;
-          margin: 0.5rem 0;
+        a {
+          h2 {
+            font-size: 1.5rem;
+            margin: 0.5rem 0;
+          }
         }
+
         h3 {
           font-size: 1.2rem;
           text-align: center;
@@ -227,5 +239,17 @@ body {
     border: 1px solid black;
     width: 100%;
     opacity: 0.1;
+  }
+}
+
+// 設定畫面載入時顯示的動畫
+@keyframes showMain {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
