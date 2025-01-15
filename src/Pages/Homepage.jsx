@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 const navs = [
@@ -9,6 +9,23 @@ const navs = [
 
 const Main = () => {
   const navigate = useNavigate();
+  // background Setup
+  useEffect(() => {
+    fetch("http://localhost:5000/api/data", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ name: "Freddy", queryID: 7 }),
+    })
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        console.log(data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  });
 
   return (
     <div className="l-main">
