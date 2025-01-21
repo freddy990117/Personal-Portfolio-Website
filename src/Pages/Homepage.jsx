@@ -36,7 +36,7 @@ const Main = () => {
         <div className="main-aboutme">
           <div className="info">
             <h1>Hello</h1>
-            <h3>A Bit About Me</h3>
+            <h3>Nice to meet you</h3>
             <p>
               Hi, I'm Freddy, a front-end developer. I'm passionate about
               developing web applications and always eager to learn new
@@ -54,6 +54,7 @@ const Main = () => {
                 // 這就是為什麼無法直接用 key 的值來控制樣式。
                 data-index={index}
                 onClick={() => navigate(nav.path)}
+                // 配合 useNagative 跳轉到不同畫面
                 style={{ cursor: "pointer" }}
               >
                 {nav.name}

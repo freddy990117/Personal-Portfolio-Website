@@ -9,7 +9,7 @@ const navs = [
 ];
 
 const navFooter = [
-  { type: "contact", name: "Phone :", data: "0988-XXX-XXX" },
+  { type: "contact", name: "Phone :", data: "0988-498-608" },
   { type: "contact", name: "Email :", data: "freddy990117@gmail.com" },
   {
     type: "social",

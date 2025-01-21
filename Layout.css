@@ -71,6 +71,9 @@ body .l-main .main-info .main-aboutme {
 body .l-main .main-info .main-aboutme .info {
   padding: 0 2rem;
 }
+body .l-main .main-info .main-aboutme .info h3 {
+  margin: 0.5rem;
+}
 body .l-main .main-info .main-aboutme .navBar-main {
   width: 100%;
   display: flex;
@@ -192,14 +195,13 @@ body .page .project-info .project-left {
 }
 body .page .project-info .project-left a h2 {
   font-size: 1.5rem;
-  margin: 0.5rem 0;
 }
 body .page .project-info .project-left h3 {
   font-size: 1.2rem;
   text-align: center;
 }
 body .page .project-info .project-left p {
-  font-weight: 500;
+  line-height: 25px;
 }
 body .page .project-info .project-right {
   margin: 0.5rem 0;
@@ -209,9 +211,9 @@ body .page .project-info .project-right {
   align-items: center;
   justify-content: center;
 }
-body .page .project-info .project-right img {
-  height: auto;
-  width: 100%;
+body .page .project-info .project-right video {
+  margin-left: 5rem;
+  margin-top: 8rem;
 }
 body .line {
   border: 1px solid black;
