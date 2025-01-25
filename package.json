@@ -10,10 +10,10 @@
     "preview": "vite preview",
     "deploy": "vite build && gh-pages -d dist"
   },
-  
   "dependencies": {
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-hamburger-menu": "^1.2.1",
     "react-router-dom": "^7.1.1"
   },
   "devDependencies": {
