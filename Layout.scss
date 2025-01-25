@@ -32,11 +32,53 @@ body {
       margin-right: 3rem;
       font-size: 15px;
       display: flex;
+      &.open {
+        transition: all 1s ease;
+      }
       .nav-header {
         font-weight: bolder;
         padding: 0 1.5rem;
         margin: 1rem;
         cursor: pointer;
+      }
+    }
+    .HamburgerMenu {
+      flex-direction: column;
+      justify-content: space-between;
+      width: 30px;
+      height: 25px;
+      cursor: pointer;
+
+      .menu-line {
+        width: 100%;
+        height: 3px;
+        background-color: black;
+        border-radius: 2px;
+        transition: all 0.3s ease-in-out;
+
+        &:nth-child(1) {
+          transform-origin: center; // 設定第一條旋轉的起點
+        }
+
+        &:nth-child(3) {
+          transform-origin: center; // 設定第三條旋轉的起點
+        }
+      }
+
+      &.open {
+        .menu-line {
+          &:nth-child(1) {
+            transform: rotate(45deg) translateY(11px); // 第一條旋轉並向下移動
+          }
+
+          &:nth-child(2) {
+            opacity: 0; // 中間一條隱藏
+          }
+
+          &:nth-child(3) {
+            transform: rotate(-45deg) translateY(-14px); // 第三條旋轉並向上移動
+          }
+        }
       }
     }
   }
@@ -253,8 +295,45 @@ body {
   .l-header {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    .HamburgerMenu {
+      position: absolute;
+      right: 2rem;
+      top: 2rem;
+      display: flex;
+      flex-direction: column;
+      z-index: 999;
+      .menu-line {
+        width: 35px;
+        height: 3px;
+        margin: 2px;
+        background-color: black;
+      }
+    }
     .navBar-header {
+      &.open {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        left: 0;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+        transition: all 0.5s ease;
+        .nav-header {
+          display: flex;
+          flex-direction: column;
+          padding: 1rem;
+          font-size: 1.3rem;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+      .nav-header {
+        display: none;
+      }
     }
   }
   // 首頁的 RWD

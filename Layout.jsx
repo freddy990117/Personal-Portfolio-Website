@@ -1,6 +1,7 @@
 import { useNavigate, Outlet } from "react-router-dom";
-
+import HamburgerMenu from "react-hamburger-menu";
 import "./Layout.css";
+import { useState } from "react";
 
 const navs = [
   { name: "Home", path: "/" },
@@ -30,18 +31,36 @@ const navFooter = [
 
 const Header = () => {
   const navigate = useNavigate();
+  // 設定 Hamburger 狀態
+  const [open, isOpen] = useState(false);
+
+  const handleOpen = () => {
+    isOpen(false);
+  };
   return (
     <div className="l-header">
       <div className="title">
         <h2>Freddy</h2>
         <p>Edit</p>
       </div>
-      <div className="navBar-header">
+      {/* 設定 Hamburger */}
+      <div
+        className={`HamburgerMenu ${open ? "open" : ""}`}
+        onClick={() => isOpen(!open)}
+      >
+        <span className="menu-line"></span>
+        <span className="menu-line"></span>
+        <span className="menu-line"></span>
+      </div>
+      <div className={`navBar-header ${open ? "open" : ""}`}>
         {navs.map((nav, index) => (
           <div
             key={index}
             className="nav-header"
-            onClick={() => navigate(nav.path)}
+            onClick={() => {
+              navigate(nav.path);
+              handleOpen();
+            }}
           >
             {nav.name}
           </div>
