@@ -180,13 +180,10 @@ body .page .project-info {
   transform: translateY(-30px);
   animation: showMain 1.5s ease-out forwards;
   display: flex;
-  margin: 0.5rem 0;
-  width: 100%;
-  height: 60vh;
   margin: 3rem 0;
 }
 body .page .project-info .project-left {
-  margin: 0 1rem 0 0;
+  margin: 0 3rem 0 0;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -204,16 +201,13 @@ body .page .project-info .project-left p {
   line-height: 25px;
 }
 body .page .project-info .project-right {
-  margin: 0.5rem 0;
-  display: flex;
   flex: 1;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
 }
 body .page .project-info .project-right video {
-  margin-left: 5rem;
-  margin-top: 8rem;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 body .line {
   border: 1px solid black;
@@ -229,5 +223,64 @@ body .line {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+@media screen and (max-width: 578px) {
+  .l-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .l-main .main-info {
+    margin-top: 1rem;
+    flex-direction: column;
+  }
+  .l-main .main-info .main-picture {
+    width: 50%;
+    height: 50%;
+  }
+  .l-main .main-info .main-aboutme {
+    width: 100%;
+  }
+  .l-main .main-info .main-aboutme .info h3 {
+    font-size: 1.5rem;
+  }
+  .l-main .main-info .main-aboutme .navBar-main .nav-main {
+    padding: 1rem;
+  }
+  .l-footer .navBar-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+  }
+  .l-footer .navBar-footer .nav-footer {
+    display: flex;
+    flex-direction: row;
+    text-align: start;
+  }
+  .l-footer .navBar-footer .nav-footer h4 {
+    font-size: 1rem;
+    margin-right: 1rem;
+  }
+  .page {
+    padding: 0.5rem 1rem;
+  }
+  .page .info .left h2 {
+    font-size: 1.2rem;
+  }
+  .page .info .right .time h3 {
+    font-size: 1rem;
+  }
+  .page .info .right .job p {
+    font-size: 0.8rem;
+  }
+  .page .project-info .project-left a h2 {
+    font-size: 1.2rem;
+  }
+  .page .project-info .project-left h3 {
+    font-size: 1rem;
+  }
+  .page .project-info .project-left p {
+    font-size: 0.8rem;
   }
 }/*# sourceMappingURL=Layout.css.map */
