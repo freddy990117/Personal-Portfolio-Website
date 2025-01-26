@@ -34,9 +34,6 @@ const Header = () => {
   // 設定 Hamburger 狀態
   const [open, isOpen] = useState(false);
 
-  const handleOpen = () => {
-    isOpen(false);
-  };
   return (
     <div className="l-header">
       <div className="title">
@@ -52,6 +49,7 @@ const Header = () => {
         <span className="menu-line"></span>
         <span className="menu-line"></span>
       </div>
+      {/* 如果狀態是 open，就變成 RWD 的樣式 */}
       <div className={`navBar-header ${open ? "open" : ""}`}>
         {navs.map((nav, index) => (
           <div
@@ -59,7 +57,7 @@ const Header = () => {
             className="nav-header"
             onClick={() => {
               navigate(nav.path);
-              handleOpen();
+              isOpen(false);
             }}
           >
             {nav.name}

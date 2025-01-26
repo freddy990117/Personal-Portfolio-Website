@@ -11,7 +11,6 @@ const My_Project = () => {
           <a href="https://github.com/freddy990117/Pexel-Picture-Project">
             <h2>Project 1 - Pexel Picture Search</h2>
           </a>
-          <br />
           <h3>
             這個專案使用 React 撰寫，並使用 Axios 訪問 Pexel
             API來搜尋和顯示圖片。
@@ -40,7 +39,6 @@ const My_Project = () => {
           <a href="https://github.com/freddy990117/All-Project/tree/main/Project_14%20Animated%20Navigation">
             <h2>Project 2 - Login Page</h2>
           </a>
-          <br />
           <h3>
             這個專案使用 SCSS 撰寫，並應用了 SCSS
             的變數、巢狀結構等功能來簡化樣式管理。
