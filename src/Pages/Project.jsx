@@ -31,7 +31,7 @@ const My_Project = () => {
           </p>
         </div>
         <div className="project-right">
-          <video src="Video/Pexel-Project.mp4" controls></video>
+          <video src="./Video/Pexel-Project.mp4" controls></video>
         </div>
       </div>
       <div className="project-info">
@@ -59,7 +59,7 @@ const My_Project = () => {
           </p>
         </div>
         <div className="project-right">
-          <video src="Video/Login_Page.mp4" controls></video>
+          <video src="./Video/Login_Page.mp4" controls></video>
         </div>
       </div>
     </div>
