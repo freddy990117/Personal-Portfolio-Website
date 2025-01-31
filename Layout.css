@@ -20,7 +20,7 @@ body .l-header {
 body .l-header .title {
   display: flex;
   align-items: center;
-  margin-left: 3rem;
+  margin: 2rem 0 0 2rem;
   font-size: 2rem;
 }
 body .l-header .title p {
@@ -78,6 +78,13 @@ body .l-main .main-info {
   align-items: center;
   justify-content: center;
   height: 100%;
+  width: 100%;
+}
+body .l-main .main-info .main-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 body .l-main .main-info .main-picture {
   flex: 1;
@@ -136,9 +143,7 @@ body .l-main .main-info .main-aboutme .navBar-main .nav-main:hover {
 body .l-footer {
   position: absolute;
   left: 0;
-  height: 0vh;
   width: 100%;
-  margin-top: 1rem;
 }
 body .l-footer .navBar-footer {
   width: 100%;
@@ -152,7 +157,8 @@ body .l-footer .navBar-footer .nav-footer .social-icons i {
   cursor: pointer;
 }
 body .layout-container .outlet-containter {
-  padding: 3rem 0 1rem 0;
+  margin-top: 2rem;
+  padding: 3rem 0;
 }
 body .page {
   display: flex;
@@ -212,15 +218,17 @@ body .page .project-info {
   transform: translateY(-30px);
   animation: showMain 1.5s ease-out forwards;
   display: flex;
-  margin: 3rem 0;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 2rem 0 0 0;
 }
 body .page .project-info .project-left {
-  margin: 0 3rem 0 0;
   flex: 1;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: start;
-  text-align: start;
+  text-align: center;
 }
 body .page .project-info .project-left a h2 {
   font-size: 1.5rem;
@@ -234,12 +242,6 @@ body .page .project-info .project-left p {
 }
 body .page .project-info .project-right {
   flex: 1;
-}
-body .page .project-info .project-right video {
-  height: 100%;
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 body .line {
   border: 1px solid black;
@@ -309,12 +311,16 @@ body .line {
     justify-content: center;
     align-items: center;
   }
+  .l-main {
+    width: 100%;
+    height: 100%;
+  }
   .l-main .main-info {
     display: flex;
     flex-direction: column;
   }
   .l-main .main-info .main-picture {
-    margin: 1rem;
+    margin: 1rem 0;
   }
   .l-footer .navBar-footer {
     display: flex;
@@ -344,8 +350,106 @@ body .line {
   .outlet-containter .page .project-info {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .outlet-containter .page .project-info .project-left {
+    margin-top: 2rem;
   }
   .outlet-containter .page .project-info .project-left h3 {
     margin: 1rem;
+  }
+}
+@media screen and (max-width: 390px) {
+  #root {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .l-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .l-header .HamburgerMenu {
+    position: absolute;
+    right: 2rem;
+    top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    z-index: 999;
+  }
+  .l-header .HamburgerMenu .menu-line {
+    width: 35px;
+    height: 3px;
+    margin: 2px;
+    background-color: black;
+  }
+  .l-header .navBar-header {
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: all 0.5s ease;
+    pointer-events: none;
+  }
+  .l-header .navBar-header .nav-header {
+    display: none;
+  }
+  .l-header .navBar-header.open {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    transition: all 0.5s ease;
+  }
+  .l-header .navBar-header.open .nav-header {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    font-size: 1.3rem;
+    justify-content: center;
+    align-items: center;
+  }
+  .l-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+  }
+  .layout-container {
+    width: 100%;
+  }
+  .layout-container .outlet-containter {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .layout-container .outlet-containter .page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .layout-container .outlet-containter .page .info {
+    display: flex;
+    flex-direction: column;
+  }
+  .layout-container .outlet-containter .page .project-info {
+    margin: 0 0 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .line {
+    height: 1px;
   }
 }/*# sourceMappingURL=Layout.css.map */

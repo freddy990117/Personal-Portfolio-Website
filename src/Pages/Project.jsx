@@ -16,8 +16,7 @@ const My_Project = () => {
             API來搜尋和顯示圖片。
           </h3>
           <p>
-            asdasd 1.使用 BrowserRouter
-            來管理各個路由，讓用戶可以在不同頁面之間導航。
+            1.使用 BrowserRouter 來管理各個路由，讓用戶可以在不同頁面之間導航。
             <br />
             2.使用 map 方法與 transition 來顯示圖片，並且每張圖片可以點擊下載。
             <br />
