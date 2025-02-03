@@ -21,8 +21,8 @@ body {
     .title {
       display: flex;
       align-items: center;
-      margin: 2rem 0 0 2rem;
       font-size: 2rem;
+      margin: 0 2rem;
       p {
         font-size: 14px;
         margin-left: 1rem;
@@ -299,6 +299,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+
     .HamburgerMenu {
       position: absolute;
       right: 2rem;
@@ -414,13 +415,8 @@ body {
   }
   // Header 的 RWD
   .l-header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     .HamburgerMenu {
-      position: absolute;
       right: 2rem;
-      top: 1.5rem;
       display: flex;
       flex-direction: column;
       z-index: 999;
@@ -432,15 +428,11 @@ body {
       }
     }
     .navBar-header {
-      opacity: 0;
-      transform: translateY(-20px);
-      transition: all 0.5s ease;
-      pointer-events: none; //關閉點擊功能
-      .nav-header {
-        display: none;
+      .title {
+        margin: 0;
+        padding: 0;
       }
       &.open {
-        opacity: 1;
         transform: translateY(0);
         pointer-events: auto;
         display: flex;
@@ -456,7 +448,6 @@ body {
         .nav-header {
           display: flex;
           flex-direction: column;
-          padding: 1rem;
           font-size: 1.3rem;
           justify-content: center;
           align-items: center;
