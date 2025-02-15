@@ -255,6 +255,7 @@ body {
         justify-content: center;
         align-items: start;
         text-align: center;
+        margin-right: 2rem;
         a {
           h2 {
             font-size: 1.5rem;
@@ -270,6 +271,9 @@ body {
       }
       .project-right {
         flex: 1;
+        video {
+          margin-top: 2rem;
+        }
       }
     }
   }

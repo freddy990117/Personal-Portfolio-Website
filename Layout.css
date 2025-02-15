@@ -229,6 +229,7 @@ body .page .project-info .project-left {
   justify-content: center;
   align-items: start;
   text-align: center;
+  margin-right: 2rem;
 }
 body .page .project-info .project-left a h2 {
   font-size: 1.5rem;
@@ -242,6 +243,9 @@ body .page .project-info .project-left p {
 }
 body .page .project-info .project-right {
   flex: 1;
+}
+body .page .project-info .project-right video {
+  margin-top: 2rem;
 }
 body .line {
   border: 1px solid black;

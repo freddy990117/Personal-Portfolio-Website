@@ -23,14 +23,14 @@ const My_Project = () => {
             3.使用 async / await 處理異步的 API
             的請求，並在載入網頁時能馬上看到圖片。
             <br />
-            4.使用 React Hook 處理搜尋圖片的功能。
+            4.使用 React Hook (useState,useEffect,useMemo)處理搜尋圖片的功能。
             <br />
             5.這個專案展示了如何整合第三方 API 並在
             React應用中使用路由和狀態管理。
           </p>
         </div>
         <div className="project-right">
-          <video src="./Video/Pexel-Project.mp4" controls></video>
+          <video src="./Video/Pexel-Project.mov" controls></video>
         </div>
       </div>
       <div className="project-info">
