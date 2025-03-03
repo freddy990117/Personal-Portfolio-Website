@@ -34,31 +34,32 @@ const My_Project = () => {
         </div>
       </div>
       <div className="project-info">
-        <div className="project-left">
+        <div className="project-left" style={{ textAlign: "start",gap:"10px" }}>
           <a href="https://github.com/freddy990117/All-Project/tree/main/Project_14%20Animated%20Navigation">
-            <h2>Project 2 - Login Page</h2>
+            <h2>Project 2 - Weather App</h2>
           </a>
           <h3>
-            這個專案使用 SCSS 撰寫，並應用了 SCSS
-            的變數、巢狀結構等功能來簡化樣式管理。
+            這個專案使用了 HTML、SCSS、JavaScript 撰寫 ，並使用 OpenWeather API
+            獲取天氣資訊，實現即時更新 UI。
           </h3>
           <p>
-            1.
-            使用百分比來控制排版，實現響應式設計效果，使介面可以適應不同大小的螢幕。
+            1.使用 fetch 向 OpenWeather API 請求天氣數據，並用 .then(...) 解析
+            JSON 資料。
             <br />
-            2. 利用 Flexbox
-            排版來實現元素的靈活對齊和排列，提升了介面結構的可讀性。
+            2.根據回傳的狀態碼判斷請求是否成功，若為 "404"
+            則顯示「找不到城市」錯誤畫面。
             <br />
-            3.使用 :focus、:vaild 偽類來處理表單元素的焦點狀態。
+            3.使用 Switch-Case 判斷天氣狀況並更換對應的天氣圖片。
             <br />
-            4.使用 transition、transfrom 處理表單的動畫‧
+            4.使用 e.preventDefault() 來防止 Enter
+            觸發表單的行為，確保可以正確被查詢。
             <br />
-            5.此專案展示了如何運用 SCSS 和現代 CSS 技術（如
-            Flexbox、:focus、偽類等）來優化網頁設計，並提升開發效率﹑增強用戶體驗。
+            5.當天氣更新前，加入 Animation
+            動畫，當新數據載入後再放大顯示，確保畫面平順切換。
           </p>
         </div>
         <div className="project-right">
-          <video src="./Video/Login_Page.mp4" controls></video>
+          <video src="./Video/Weather_App.mp4" controls></video>
         </div>
       </div>
     </div>
