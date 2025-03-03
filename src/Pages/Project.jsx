@@ -34,8 +34,11 @@ const My_Project = () => {
         </div>
       </div>
       <div className="project-info">
-        <div className="project-left" style={{ textAlign: "start",gap:"10px" }}>
-          <a href="https://github.com/freddy990117/All-Project/tree/main/Project_14%20Animated%20Navigation">
+        <div
+          className="project-left"
+          style={{ textAlign: "start", gap: "10px" }}
+        >
+          <a href="https://github.com/freddy990117/Weather-APP/tree/main">
             <h2>Project 2 - Weather App</h2>
           </a>
           <h3>
